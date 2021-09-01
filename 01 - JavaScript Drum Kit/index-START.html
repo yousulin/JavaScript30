@@ -60,7 +60,7 @@
 <script>
 function playSound(e){
   //取得鍵盤所鍵入的訊息，當中以keyCode做為參考
-  //根據audio的data-key，找出相同keycode的audio物件
+  //<audio>物件中，data-key和keycode相同的audio物件
   const audio = document.querySelector(`audio[data-key="${e.keyCode}"]`);
   //如果按下的按鍵沒有對應的audio物件，則不再繼續執行這個功能
   if(!audio) return;
@@ -68,7 +68,29 @@ function playSound(e){
   audio.currentTime = 0;
   //播放找出的audio物件
   audio.play();
+  
+  //符合class="key"的<div>物件中，data-key和keycode相同的div物件
+  const key = document.querySelector(`.key[data-key="${e.keyCode}"]`);
+  //並加上class = "playing"的css設定
+  key.classList.add('playing');
 }
+
+function removeTransition(e){
+  //此時的event是transitionend
+  // console.log(e);
+
+  //摒除event與transition無關的情形
+  //比較propertyName和attribute的差別
+  if(e.propertyName !== 'transition') return;
+  console.log(e.propertyName);
+}
+
+//取得所有符合class="key"的<div>物件
+const keys = document.querySelectorAll('.key');
+//什麼是arrow function
+key.forEach(key => key.addEventListener('transitionend', removeTransition));
+
+//
 window.addEventListener('keydown', playSound);
 
 
