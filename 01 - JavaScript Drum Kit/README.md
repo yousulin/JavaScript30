@@ -13,10 +13,12 @@
       <li>按鈕彈一下(微小放大)的動畫</li>
     </ul>
   </ul>
+ </ul>
 <h1>Javascript</h1>
 <h2>Arrow Function</h2>
 <ul>
-<li><a href="http://www.jollen.org/blog/2013/10/javascript-lambda.html" rel="nofollow">lambda</a> 在Javascript裡叫 <code>arrow function</code></li>
+<li>
+  <a href="http://www.jollen.org/blog/2013/10/javascript-lambda.html" rel="nofollow">lambda</a> 在Javascript裡叫 <code>arrow function</code></li>
 </ul>
 <p>一般js的匿名函數這樣寫</p>
 <div class="snippet-clipboard-content position-relative" data-snippet-clipboard-copy-content="funtion (key) {
