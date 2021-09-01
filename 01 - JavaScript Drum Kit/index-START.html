@@ -61,10 +61,10 @@
 function playSound(){
 }
 window.addEventListener('keydown', function(e){
-  // const audio = document.querySelector(`audio[data-key="${e.keyCode}"]`);
-  console.log(e.keyCode);
-
-  });
+  // console.log(e.keyCode);
+  const audio = document.querySelector(`audio[data-key="${e.keyCode}"]`);
+  audio.play();
+});
 
 
 </script>
