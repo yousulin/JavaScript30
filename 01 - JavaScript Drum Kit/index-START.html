@@ -62,11 +62,9 @@ function playSound(e){
   //取得鍵盤所鍵入的訊息，當中以keyCode做為參考
   var input = e.keyCode;
   //根據audio的data-key，找出相同keycode的audio物件(audio[data-key="${e.keyCode}"])
-  const audio = document.querySelector(`audio[data-key="input"]`);
+  const audio = document.querySelector(`audio[data-key=input]`);
   //如果按下的按鍵沒有對應的audio物件，則不再繼續執行這個功能
-  if(!audio){
-    return;
-  }
+  if(!audio) return;
   //將audio的檔案播放時間位置歸零，從頭開始播放
   audio.currentTime = 0;
   //播放找出的audio物件
