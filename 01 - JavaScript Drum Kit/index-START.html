@@ -92,7 +92,7 @@ function removeTransition(e){
 //取得所有符合class="key"的<div>物件
 const keys = document.querySelectorAll('.key');
 //什麼是arrow function
-key.forEach(key => key.addEventListener('transitionend', removeTransition));
+keys.forEach(key => key.addEventListener('transitionend', removeTransition));
 
 window.addEventListener('keydown', playSound);
 
