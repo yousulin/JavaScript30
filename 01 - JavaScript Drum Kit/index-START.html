@@ -58,7 +58,7 @@
   <audio data-key="76" src="sounds/tink.wav"></audio>
 
 <script>
-function playSound(){
+function playSound(e){
   //取得鍵盤所鍵入的訊息，當中以keyCode做為參考
   var input = e.keyCode;
   //根據audio的data-key，找出相同keycode的audio物件(audio[data-key="${e.keyCode}"])
